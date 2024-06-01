@@ -18,8 +18,4 @@ public interface UserFileRepository extends CrudRepository<UserFile, Long> {
     @Transactional
     @Modifying
     void deleteByFilepath(String filepath);
-
-    @Transactional
-    @Modifying
-    void deleteByFilepathAndEmail(String filepath, String email);
 }

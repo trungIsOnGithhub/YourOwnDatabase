@@ -12,7 +12,6 @@ public class UserFiles {
     private Long id;
 
     String filepath;
-
     String email;
 
     public Long getId() {
@@ -25,7 +24,6 @@ public class UserFiles {
     public String getFilepath() {
         return filepath;
     }
-
     public void setFilepath(String filepath) {
         this.filepath = filepath;
     }
