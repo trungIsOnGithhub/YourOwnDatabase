@@ -13,8 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 public interface UserFileRepository extends CrudRepository<UserFile, Long> {
-    List<UserFile> getByFileparent(String filepath);
-    UserFile getByFilepathAndFileparent(String filepath, String fileparent);
+    List<UserFile> getByEmail(String email);
 
     @Transactional
     @Modifying
@@ -22,11 +21,5 @@ public interface UserFileRepository extends CrudRepository<UserFile, Long> {
 
     @Transactional
     @Modifying
-    @Query("UPDATE File SET File.starred = :starred WHERE File.filepath = :filepath")
-    void markStar(@Param("filepath") String filepath, @Param("starred") String starred);
-
-    @Transactional
-    @Modifying
-    @Query("UPDATE File SET File.sharedcount = :sharedcount WHERE File.filepath = :filepath")
-    void updateSharedCount(@Param("filepath") String filepath, @Param("sharedcount") Integer sharedcount);
+    void deleteByFilepathAndEmail(String filepath, String email);
 }
