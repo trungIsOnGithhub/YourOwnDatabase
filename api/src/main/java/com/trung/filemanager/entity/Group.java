@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 public class Groups {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    Integer groupid;
+    Long id;
 
     String groupname;
 
@@ -20,17 +20,16 @@ public class Groups {
     public String getGroupname() {
         return groupname;
     }
-
     public void setGroupname(String groupname) {
         this.groupname = groupname;
     }
 
-    public Integer getGroupid() {
-        return groupid;
+    public Integer getGroupId() {
+        return id;
     }
 
-    public void setGroupId(Integer groupid) {
-        this.groupid = groupid;
+    public void setGroupId(Integer id) {
+        this.id = id;
     }
 
     public Integer getMembercount() {

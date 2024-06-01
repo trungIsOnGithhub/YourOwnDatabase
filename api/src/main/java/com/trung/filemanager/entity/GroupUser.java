@@ -9,32 +9,29 @@ import javax.persistence.Id;
 public class GroupUsers {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
-    Integer groupid;
+    Long groupId;
 
     String email;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
-
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getGroupid() {
+    public Long getGroupId() {
         return groupid;
     }
-
-    public void setGroupid(Integer groupid) {
-        this.groupid = groupid;
+    public void setGroupId(Long groupId) {
+        this.groupId = groupId;
     }
 
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
