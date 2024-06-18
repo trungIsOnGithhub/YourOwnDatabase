@@ -33,9 +33,9 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public int updateUserDetails(User user) {
-        return userRepository.updateUserDetails(user.getFirstname(), user.getLastname(),
-                                            user.getContact(), user.getMotto(),
-                                            user.getEmail());
-    }
+    // public int updateUserDetails(User user) {
+    //     return userRepository.updateUserDetails(user.getFirstname(), user.getLastname(),
+    //                                         user.getContact(), user.getMotto(),
+    //                                         user.getEmail());
+    // }
 }

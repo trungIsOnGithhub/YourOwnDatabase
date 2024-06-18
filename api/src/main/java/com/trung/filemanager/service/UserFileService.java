@@ -17,7 +17,7 @@ public class UserFileService {
         repository.save(record);
     }
 
-    public List<Userfiles> getUserFilesByEmail(String email) {
+    public List<UserFile> getUserFilesByEmail(String email) {
        return repository.getByEmail(email);
     }
 

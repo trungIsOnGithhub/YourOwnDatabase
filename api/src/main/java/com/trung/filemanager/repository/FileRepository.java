@@ -12,9 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface FileRepository extends CrudRepository<Files, Long> {
-    List<Files> getByFileparent(String filepath);
-    Files getByFilepathAndFileparent(String filepath, String fileparent);
+public interface FileRepository extends CrudRepository<File, Long> {
+    List<File> getByFileparent(String filepath);
+    File getByFilepathAndFileparent(String filepath, String fileparent);
 
     @Transactional
     @Modifying
@@ -22,11 +22,11 @@ public interface FileRepository extends CrudRepository<Files, Long> {
 
     @Transactional
     @Modifying
-    @Query("UPDATE Files SET Files.starred = :starred WHERE Files.filepath = :filepath")
+    @Query(value="UPDATE Files SET Files.starred = :starred WHERE Files.filepath = :filepath", nativeQuery=true)
     void markStar(@Param("filepath") String filepath, @Param("starred") String starred);
 
     @Transactional
     @Modifying
-    @Query("UPDATE Files SET Files.sharedcount = :sharedcount WHERE Files.filepath = :filepath")
+    @Query(value="UPDATE Files SET Files.sharedcount = :sharedcount WHERE Files.filepath = :filepath", nativeQuery=true)
     void updateSharedCount(@Param("filepath") String filepath, @Param("sharedcount") Integer sharedcount );
 }

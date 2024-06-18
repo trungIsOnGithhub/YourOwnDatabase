@@ -1,7 +1,7 @@
 package com.trung.filemanager.service;
 
 import com.trung.filemanager.entity.File;
-import com.trung.filemanager.entity.Group;
+import com.trung.filemanager.entity.Ugroup;
 import com.trung.filemanager.repository.FileRepository;
 import com.trung.filemanager.repository.GroupRepository;
 
@@ -15,19 +15,23 @@ public class GroupService {
     @Autowired
     private GroupRepository repository;
 
-    public void addGroup(Group group) {
+    public void addGroup(Ugroup group) {
         repository.save(group);
     }
 
-    public List<Group> getGroups(String email) {
+    public List<Ugroup> getGroups(String email) {
         return repository.getGroupsByOwner(email);
     }
 
-    public void deleteGroup(Integer id) {
-        repository.deleteByGroupid(id);
+    public void deleteGroup(Long id) {
+        repository.deleteById(id);
     }
 
-    public Group getGroupByGroupId(Integer id) {
-        return repository.getByGroupid(id);
+    public Ugroup getGroupByGroupId(Long id) {
+        return repository.getById(id);
+    }
+
+    public Ugroup deleteGroupByGroupId(Long id) {
+        return repository.getById(id);
     }
 }
