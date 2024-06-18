@@ -1,12 +1,12 @@
 package com.trung.filemanager.entity;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
-public class Groups {
+public class Ugroup {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     Long id;
@@ -24,11 +24,11 @@ public class Groups {
         this.groupname = groupname;
     }
 
-    public Integer getGroupId() {
+    public Long getGroupId() {
         return id;
     }
 
-    public void setGroupId(Integer id) {
+    public void setGroupId(Long id) {
         this.id = id;
     }
 

@@ -1,10 +1,10 @@
 package com.trung.filemanager.entity;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
 
 @Entity
-public class Files {
+public class File {
     @Id
     String filepath;
 
