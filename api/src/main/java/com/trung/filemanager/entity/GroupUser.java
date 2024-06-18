@@ -1,12 +1,12 @@
 package com.trung.filemanager.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class GroupUsers {
+public class GroupUser {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
@@ -23,7 +23,7 @@ public class GroupUsers {
     }
 
     public Long getGroupId() {
-        return groupid;
+        return groupId;
     }
     public void setGroupId(Long groupId) {
         this.groupId = groupId;

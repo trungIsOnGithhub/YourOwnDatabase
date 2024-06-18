@@ -1,9 +1,9 @@
 package com.trung.filemanager.entity;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class User {
@@ -62,7 +62,7 @@ public class User {
     }
 
     public String getMotto() {
-        return interests;
+        return this.motto;
     }
 
     public void setMotto(String motto) {

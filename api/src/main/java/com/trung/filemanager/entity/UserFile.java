@@ -1,12 +1,12 @@
 package com.trung.filemanager.entity;
 
-import javax.persistence.Id;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
-public class UserFiles {
+public class UserFile {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
